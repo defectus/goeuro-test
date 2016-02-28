@@ -6,14 +6,27 @@ import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Does the data processing/conversion
+ */
 public class GeoProcessor {
 
+    /**
+     * Reads a json and maps to the model class
+     * @param json Input json
+     * @return Populated model
+     */
     public List<GeoInputData> parseJson(String json) {
         Gson gson = new Gson();
         return gson.fromJson(json, new TypeToken<ArrayList<GeoInputData>>() {
         }.getType());
     }
 
+    /**
+     * Mothod converts between the input and output model
+     * @param input Input model (json)
+     * @return Output model (CSV)
+     */
     public static GeoOutputData inputToOutput(GeoInputData input) {
         if (input == null) {
             return null;

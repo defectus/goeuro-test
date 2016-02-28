@@ -7,6 +7,11 @@ import java.net.URL;
 
 public interface UrlReader {
 
+    /**
+     * Reads plain text at a URL
+     * @param urlString URL as a string
+     * @return Text at the url or an exception if error occurred
+     */
     default String readUrl(String urlString) {
         StringBuffer output = null;
         try {

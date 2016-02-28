@@ -15,7 +15,7 @@ class DefaultUrlReaderSpec extends Specification {
 
     void "reader can read a given location"() {
         when:
-            String content = new DefaultUrlReader().readLocation(Main.BASE_URL, BERLIN)
+            String content = new DefaultUrlReader().readLocationJson(Main.BASE_URL, BERLIN)
         then:
             content
             content.length() > 100

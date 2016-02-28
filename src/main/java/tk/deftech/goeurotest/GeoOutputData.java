@@ -1,5 +1,8 @@
 package tk.deftech.goeurotest;
 
+/**
+ * Data object holding the output model (CSV)
+ */
 public class GeoOutputData {
 
     private Integer _id;

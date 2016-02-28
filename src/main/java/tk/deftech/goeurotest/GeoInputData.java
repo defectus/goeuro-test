@@ -1,5 +1,8 @@
 package tk.deftech.goeurotest;
 
+/**
+ * Data objects holding the location JSON
+ */
 public class GeoInputData {
 
     private Integer _id;
